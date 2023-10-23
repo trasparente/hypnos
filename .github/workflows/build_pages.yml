@@ -1,0 +1,11 @@
+name: Request pages build with GitHub CLI
+on:
+  schedule:
+    - cron: 0 0 * * *
+jobs:
+  build_pages:
+    runs-on: ubuntu-latest
+    steps:
+      - run: gh api -X POST repos/${{ github.repository }}/pages/builds
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
