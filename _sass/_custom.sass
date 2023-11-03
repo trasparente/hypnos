@@ -1,2 +1,15 @@
 body
   --link: var(--color-purple)
+
+main p
+  word-break: break-all
+
+// Serie colors
+[data-serie='2']
+  @extend .color-red
+[data-serie='1']
+  @extend .color-green
+
+// No practice
+main code:not([data-serie])
+  opacity: .3
