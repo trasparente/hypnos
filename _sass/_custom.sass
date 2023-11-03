@@ -5,11 +5,21 @@ main p
   word-break: break-all
 
 // Serie colors
-[data-serie='2']
-  @extend .color-red
-[data-serie='1']
-  @extend .color-green
+code
+  &[data-serie='2']
+    @extend .color-red
+  &[data-serie='1']
+    @extend .color-green
+
+// Time colors
+td
+  &[data-value='briefing']
+    @extend .color-green
+  &[data-value='bill']
+    @extend .color-orange
+  &[data-value='trash']
+    @extend .color-muted
 
 // No practice
-main code:not([data-serie])
+main p code:not([data-serie])
   opacity: .3

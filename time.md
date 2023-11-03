@@ -22,17 +22,17 @@ form:
 {:.language-liquid}
     {% raw %}{% include widgets/view.html csv="time" category="trash" %}{% endraw %}
 
-{% include widgets/view.html csv="time" category="briefing" limit="4" %}
+{% include widgets/view.html csv="time" category="briefing" limit="4" sort="asc" %}
 {:.language-liquid}
-    {% raw %}{% include widgets/view.html csv="time" category="briefing" limit="4" %}{% endraw %}
+    {% raw %}{% include widgets/view.html csv="time" category="briefing" limit="4" sort="asc" %}{% endraw %}
 
-{% include widgets/view.html csv="time" category="bill" limit="4" %}
+{% include widgets/view.html csv="time" category="bill" limit="4" sort="asc" %}
 {:.language-liquid}
-    {% raw %}{% include widgets/view.html csv="time" category="bill" limit="4" %}{% endraw %}
+    {% raw %}{% include widgets/view.html csv="time" category="bill" limit="4" sort="asc" %}{% endraw %}
 
-{% include widgets/view.html csv="time" category="yaris, kangoo, citroen" title="cars" %}
+{% include widgets/view.html csv="time" category="yaris, kangoo, citroen" title="cars" sort="asc" %}
 {:.language-liquid}
-    {% raw %}{% include widgets/view.html csv="time" category="yaris, kangoo, citroen" title="cars" %}{% endraw %}
+    {% raw %}{% include widgets/view.html csv="time" category="yaris, kangoo, citroen" title="cars" sort="asc" %}{% endraw %}
 
 <details markdown=1>
 <summary><code>csv=time</code></summary>
@@ -40,8 +40,3 @@ form:
 {% include widgets/view.html csv="time" %}
 
 </details>
-<style>
-td[data-value='briefing']{color:var(--color-green)}
-td[data-value='bill']{color:var(--color-orange)}
-td[data-value='trash']{color:var(--fg-muted)}
-</style>
