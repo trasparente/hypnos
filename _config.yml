@@ -1,3 +1,10 @@
 timezone: Europe/Rome
 permalink: pretty
 remote_theme: trasparente/mdr@gh-pages
+
+# DEFAULTS
+defaults:
+  - scope:
+      path: ''
+    values:
+      class: accent-purple
