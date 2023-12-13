@@ -1,4 +1,5 @@
 ---
+title: practices
 form:
   file: practices.csv
   fields:
@@ -10,13 +11,15 @@ form:
       options: [0,1,2,3,4]
       default: 1
 ---
-Practices
-=========
+<figure>
+<img src="https://ashtanga.github.io/ashtanga_logo.svg" alt="Ashtanga">
+</figure>
 
-{% assign count = 0 %}{% assign total = 0 %}{% assign not = 0 %}
-{% for d in (0..59) reversed %}{% assign gap = d | times: 86400 %}{% assign day = site.time | date: "%s" | minus: gap | date: "%F" %}{% assign is = site.data.practices | where: "date", day | size %}{% if is > 0 %}{% assign count = count | plus: 1 %}{% assign total = total | plus: 1 %}{% assign not = 0 %}<code data-serie='{{ site.data.practices | where: "date", day | map: "serie" }}'>{{ count }}</code>{% else %}{% assign not = not | plus: 1 %}<code>{{ not }}</code>{% assign count = 0 %}{% endif %}{% endfor %}
+{% include widgets/calendar.html csv='practices' property='serie' %}
+
 <div class='flex'>
 <div markdown='1'>
+
 |{{ site.time | date: "%s" | minus: 5097600 | date: "%-d/%-m" }}|Practices||%
 |--|--|--|--
 |<span style='visibility:hidden'>00</span>60|{{ total }}|<progress max="60" value="{{ total }}"></progress>|{{ total | times: 100 | divided_by: 60 }}

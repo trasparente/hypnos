@@ -1,14 +1,26 @@
-main p
-  word-break: break-all
+// LAYOUT
+figure
+  height: 332px
+  text-align: center
+  img
+    filter: invert(10%)
+.flex
+  justify-content: space-evenly
 
-// Serie colors
-code
-  &[data-serie='2']
-    @extend .color-red
-  &[data-serie='1']
-    @extend .color-green
+// PRACTICES
+// ---------
+.calendar
+  // Serie colors
+  div[data-property='2']
+    @extend .accent-red
+  div[data-property='1']
+    @extend .accent-green
 
-// Time colors
+th:first-child
+  min-width: 2.6em
+
+// TIME
+// -----------
 td
   &[data-value='briefing']
     @extend .color-green
@@ -16,7 +28,3 @@ td
     @extend .color-orange
   &[data-value='trash']
     @extend .color-muted
-
-// No practice
-main p code:not([data-serie])
-  opacity: .3
