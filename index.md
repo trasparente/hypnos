@@ -11,9 +11,7 @@ form:
       options: [0,1,2,3,4]
       default: 1
 ---
-<figure>
-<img src="https://ashtanga.github.io/ashtanga_logo.svg" alt="Ashtanga">
-</figure>
+<figure>{% include ashtanga_logo.html %}</figure>
 
 {% include widgets/calendar.html csv='practices' property='serie' %}
 
