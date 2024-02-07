@@ -18,9 +18,9 @@ form:
 {:.language-liquid}
     {% raw %}{% include widgets/form.html %}{% endraw %}
 
-{% include widgets/view.html csv="time" category="trash" %}
+{% include widgets/view.html csv="time" category="trash" sort='asc' %}
 {:.language-liquid}
-    {% raw %}{% include widgets/view.html csv="time" category="trash" %}{% endraw %}
+    {% raw %}{% include widgets/view.html csv="time" category="trash" sort='asc' %}{% endraw %}
 
 {% include widgets/view.html csv="time" category="briefing" limit="4" sort="asc" %}
 {:.language-liquid}
