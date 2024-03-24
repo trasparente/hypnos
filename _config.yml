@@ -8,3 +8,10 @@ defaults:
       path: ''
     values:
       class: accent-purple
+      layout: default
+
+# COLLECTIONS
+collections:
+  cronos:
+    title: Cronos
+    output: true
