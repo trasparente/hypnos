@@ -7,7 +7,7 @@ defaults:
   - scope:
       path: ''
     values:
-      class: accent-purple
+      class: accent-yellow
       layout: default
 
 # COLLECTIONS
