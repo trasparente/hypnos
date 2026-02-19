@@ -8,7 +8,7 @@ form:
       default: today
     serie:
       type: select
-      options: [U,0,1,2,3,4]
+      options: [M,U,0,1,2,3,4]
 ---
 <figure>{% include ashtanga_logo.html %}</figure>
 
@@ -31,6 +31,7 @@ form:
 <div markdown='1'>
 |Serie|Practices|First|Last
 |--:|--:|--:|--:|
+|<span class='color-yellow'>Mandala</span>|{{ site.data.practices | where: "serie", 'M' | size }}|{% include widgets/first.html data=site.data.practices field='serie' value='M' %}|{% include widgets/last.html data=site.data.practices field='serie' value='M' %}
 |<span class='color-blue'>Universal</span>|{{ site.data.practices | where: "serie", 'U' | size }}|{% include widgets/first.html data=site.data.practices field='serie' value='U' %}|{% include widgets/last.html data=site.data.practices field='serie' value='U' %}
 |<span class='color-muted'>Null</span>|{{ site.data.practices | where: "serie", 0 | size }}|{% include widgets/first.html data=site.data.practices field='serie' value='0' %}|{% include widgets/last.html data=site.data.practices field='serie' value='0' %}
 |<span class='color-green'>First</span>|{{ site.data.practices | where: "serie", 1 | size }}|{% include widgets/first.html data=site.data.practices field='serie' value='1' %}|{% include widgets/last.html data=site.data.practices field='serie' value='1' %}
