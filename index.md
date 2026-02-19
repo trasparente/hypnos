@@ -10,7 +10,7 @@ form:
       type: select
       options: [M,U,0,1,2,3,4]
 ---
-<figure>{% include ashtanga_logo.html %}</figure>
+<figure>{% include yantra.html %}</figure>
 
 {% include widgets/calendar.html csv='practices' property='serie' %}
 
